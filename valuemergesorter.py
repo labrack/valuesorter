@@ -1,3 +1,13 @@
+# Function to read values from the input file
+def read_values(filename):
+    values = []
+    with open(filename, 'r') as file:
+        for line in file:
+            value = line.strip()
+            if value:
+                values.append(value)
+    return values
+
 # Function to compare two values and return the preferred one
 def compare_values(value_a, value_b):
     print(f"Do you rank '{value_a}' over '{value_b}'? (y/n): ", end="")
@@ -26,6 +36,12 @@ def merge_sort(values):
     right = merge_sort(values[mid:])
     
     return merge(left, right)
+
+# Function to write the sorted values to the output file
+def write_sorted_values(filename, sorted_values):
+    with open(filename, 'w') as file:
+        for value in sorted_values:
+            file.write(value + '\n')
 
 # Main function
 def main(input_file, output_file):
