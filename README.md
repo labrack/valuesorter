@@ -1,5 +1,5 @@
 # valuesorter
-A program to sort personal values.
+A program to sort personal values, to identify what's most important to you as a person.
 
 How to use:
 1. Place your personal values, one per line, in values.txt (or use the provided examples)
